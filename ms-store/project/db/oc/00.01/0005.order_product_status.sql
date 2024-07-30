@@ -1,0 +1,1 @@
+ALTER TABLE `oc_order_product_status` ADD `bg_color` VARCHAR(7) NOT NULL DEFAULT '#ffffff' COMMENT 'цвет фона' AFTER `required`, ADD `text_color` VARCHAR(7) NOT NULL DEFAULT '#000000' COMMENT 'цвет текста' AFTER `bg_color`;

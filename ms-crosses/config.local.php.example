@@ -1,0 +1,41 @@
+<?php
+
+// DB TD
+define('TD_DB_HOSTNAME', 'localhost');
+define('TD_DB_USERNAME', 'postgres');
+define('TD_DB_PORT', '5432');
+define('TD_DB_PASSWORD', 'admin');
+
+define('TD_DB_DATABASE_CROSS_CLIENT','cross_client1');
+define('TD_DB_DATABASE_API','api');
+define('TD_DB_DATABASE_GENERAL_CROSSES','general_crosses');
+define('GET_BRAND_ID_BY_NAME_ADRESS','http://139.168.33.11/brand/GetBrandIdbyName.php');
+define('GET_BRAND_NAME_BY_ID_ADRESS','http://139.168.33.11/brand/GetBrandNamebyId.php');
+define('TD_DB_TABLE_TASK_IMPORT','task_import');
+define('TD_DB_TABLE_TDM_LINKS_TMP','tdm_links_tmp');
+define('TD_DB_TABLE_TDM_LINKS','tdm_links');
+
+
+
+
+
+
+
+
+
+define('OUTPUT_FIELD_A1', 'AKEY1');
+define('OUTPUT_FIELD_B1', 'BRAND_ID1');
+define('OUTPUT_FIELD_A2', 'AKEY2');
+define('OUTPUT_FIELD_B2', 'BRAND_ID2');
+define('STATUS', 'status');
+
+define('OUTPUT_b__name', 'b__name');
+define('OUTPUT_b__parent_id', 'b__parent_id');
+define('STATUS_b', 'b__status');
+
+
+define('LIMIT', '2');
+define('DELIMITER', ';');
+define('OUTPUT_DATABASE', 'test');
+define('OUTPUT_TABLE_NAME', 'tdm_link_tmps');
+define('TABLE_NAME', 'tdm_brands');

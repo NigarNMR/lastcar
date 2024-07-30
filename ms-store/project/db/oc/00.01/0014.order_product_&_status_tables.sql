@@ -1,0 +1,3 @@
+ALTER TABLE `oc_order_product` ADD `acquiring_price` DECIMAL(15,4) NOT NULL DEFAULT '0' AFTER `order_product_status_id`, ADD `fragmentation_status` BOOLEAN NOT NULL DEFAULT FALSE AFTER `acquiring_price`, ADD `fragmentation_date` DATETIME NULL DEFAULT NULL AFTER `fragmentation_status`, ADD `fragmentation_description` TEXT NULL AFTER `fragmentation_date`, ADD `order_product_parent_id` INT NOT NULL DEFAULT '0' AFTER `fragmentation_description`;
+
+ALTER TABLE `oc_order_product_status` ADD `status_parent_id` INT(11) NOT NULL DEFAULT '0' AFTER `text_color`;

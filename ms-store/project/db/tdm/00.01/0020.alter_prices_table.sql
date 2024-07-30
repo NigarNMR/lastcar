@@ -1,0 +1,27 @@
+ALTER TABLE  `TDM_PRICES`
+ADD  `PRICE_SUPP` FLOAT( 12, 2 ) NULL AFTER  `PRICE_ORIG` ;
+
+ALTER TABLE  `TDM_PRICES`
+ADD  `PRICE_ID_1` FLOAT( 12, 2 ) NULL ,
+ADD  `PRICE_ID_2` FLOAT( 12, 2 ) NULL ,
+ADD  `PRICE_ID_3` FLOAT( 12, 2 ) NULL ,
+ADD  `PRICE_ID_4` FLOAT( 12, 2 ) NULL ,
+ADD  `PRICE_ID_5` FLOAT( 12, 2 ) NULL ;
+
+INSERT INTO  `tdm_web_eijen_ru`.`TDM_SETTINGS` (
+`ITEM` ,
+`FIELD` ,
+`VALUE`
+)
+VALUES (
+'pricetype',  'PRICE_DISCOUNT_1',  '50'
+);
+
+INSERT INTO  `tdm_web_eijen_ru`.`TDM_SETTINGS` (
+`ITEM` ,
+`FIELD` ,
+`VALUE`
+)
+VALUES (
+'pricetype',  'PRICE_VIEW_1',  '2'
+);

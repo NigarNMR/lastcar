@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!-- так можно оставлять комментарии -->
+<modification>
+ 
+  <!-- название модификации -->
+  <id>Theme Basecart</id>
+ 
+  <!-- версия этой модификации-->
+  <version>1.0.0</version>
+ 
+  <!-- версия vqmod на которой эта модификация должна работать -->
+  <vqmver required="true">2.6.0</vqmver>
+ 
+  <!-- автор этой модификации -->
+  <author>
+    <a href="mailto:mashkovsky_ab@eniak.ru">Mashkovsky A.B.</a>
+  </author>
+ 
+  <comment><![CDATA[
+    Тут какой-то комментарий - что именно делает этот файл
+  ]]></comment>
+ 
+  <!-- файл в котором нам нужно что-то изменить, таких файлових секций может быть много в этом xml файле -->
+  <file name="catalog/controller/common/header.php">
+ 
+    <!-- операция изменения. Для каждого изменения своя операция. Таких секций может быть много для этого файла -->
+    <operation>
+ 
+      <!-- Где в файле нужно внести изменения. Тут указывается позиция, в данном случае "after" и код, он указывается между <![CDATA[...]]> Это означает что после (after) этого кода нужно что-то добавить. Если добавить нужно перед то в позицию нужно писать "before", а если нужно заменить этот кусок кода то "replace" Важно! Код должен точно соответсвовать коду в этом файле. Один лишний пробел и vQmod ничего не найдет. -->
+      <search position="after"><![CDATA[$data['telephone'] = $this->config->get('config_telephone');]]></search>
+ 
+      <!-- Тут мы пишем наш код который нужно вставить после, перед или заменить существующий -->
+      <add><![CDATA[
+      $data['theme'] = $this->config->get('basecart_module_theme');
+      $data['nav'] = $this->config->get('basecart_module_nav');
+      ]]></add>
+    </operation>
+  </file>
+  
+  <file name="catalog/controller/module/banner.php">
+ 
+    <!-- операция изменения. Для каждого ихменения своя операция. Таких секций может быть много для этого файла -->
+    <operation>
+ 
+      <!-- Где в файле нужно внести изменения. Тут указывается позиция, в данном случае "after" и код, он указывается между <![CDATA[...]]> Это означает что после (after) этого кода нужно что-то добавить. Если добавить нужно перед то в позицию нужно писать "before", а если нужно заменить этот кусок кода то "replace" Важно! Код должен точно соответсвовать коду в этом файле. Один лишний пробел и vQmod ничего не найдет. -->
+      <search position="after"><![CDATA[$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');]]></search>
+ 
+      <!-- Тут мы пишем наш код который нужно вставить после, перед или заменить существующий -->
+      <add><![CDATA[
+      $this->document->addStyle('catalog/view/theme/basecart/css/basecart_owl.carousel.css');
+      ]]></add>
+    </operation>
+  </file>
+  
+  <file name="catalog/controller/module/carousel.php">
+ 
+    <!-- операция изменения. Для каждого ихменения своя операция. Таких секций может быть много для этого файла -->
+    <operation>
+ 
+      <!-- Где в файле нужно внести изменения. Тут указывается позиция, в данном случае "after" и код, он указывается между <![CDATA[...]]> Это означает что после (after) этого кода нужно что-то добавить. Если добавить нужно перед то в позицию нужно писать "before", а если нужно заменить этот кусок кода то "replace" Важно! Код должен точно соответсвовать коду в этом файле. Один лишний пробел и vQmod ничего не найдет. -->
+      <search position="after"><![CDATA[$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');]]></search>
+ 
+      <!-- Тут мы пишем наш код который нужно вставить после, перед или заменить существующий -->
+      <add><![CDATA[
+      $this->document->addStyle('catalog/view/theme/basecart/css/basecart_owl.carousel.css');
+      ]]></add>
+    </operation>
+  </file>
+  
+  <file name="catalog/controller/module/slideshow.php">
+ 
+    <!-- операция изменения. Для каждого ихменения своя операция. Таких секций может быть много для этого файла -->
+    <operation>
+ 
+      <!-- Где в файле нужно внести изменения. Тут указывается позиция, в данном случае "after" и код, он указывается между <![CDATA[...]]> Это означает что после (after) этого кода нужно что-то добавить. Если добавить нужно перед то в позицию нужно писать "before", а если нужно заменить этот кусок кода то "replace" Важно! Код должен точно соответсвовать коду в этом файле. Один лишний пробел и vQmod ничего не найдет. -->
+      <search position="after"><![CDATA[$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');]]></search>
+ 
+      <!-- Тут мы пишем наш код который нужно вставить после, перед или заменить существующий -->
+      <add><![CDATA[
+      $this->document->addStyle('catalog/view/theme/basecart/css/basecart_owl.carousel.css');
+      ]]></add>
+    </operation>
+  </file>
+  
+</modification>

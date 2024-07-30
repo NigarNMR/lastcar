@@ -1,0 +1,30 @@
+<?php
+
+// DB TD
+define('TD_DB_HOSTNAME', 'localhost');
+define('TD_DB_USERNAME', 'postgres');
+define('TD_DB_PORT', '5432');
+define('TD_DB_PASSWORD', 'admin');
+
+define('TD_DB_DATABASE_BRANDS_CLIENT1','brands_client1');
+define('TD_DB_DATABASE_API','api');
+define('TD_DB_DATABASE_GENERAL_BRANDS','general_brands');
+define('TD_DB_TABLE_TASK_IMPORT','task_import');
+define('TD_DB_TABLE_TDM_BRANDS','tdm_brandstesting');
+define('TD_DB_TABLE_TDM_GROUPS_OF_BRANDS','tdm_groups_of_brandstesting');
+define('TD_DB_TABLE_TDM_GROUP_BRAND','tdm_group_brandtesting');
+define('TD_DB_TABLE_TDM_DICTIONARIES','tdm_dictionariestesting');
+define('GET_GROUP_ID_BY_NAME','http://139.168.33.11/brand/GetGroupIdbyName.php');
+define('GET_BRAND_NAME_BY_ID','http://139.168.33.11/brand/GetBrandNamebyId.php');
+define('GET_BRAND_ID_BY_NAME','http://139.168.33.11/brand/GetBrandIdbyName.php');
+define('GET_GROUP_NAME_BY_ID','http://139.168.33.11/brand/GetGroupNamebyId.php');
+define('GET_ALL_GROUPS','http://139.168.33.11/brand/GetAllBrandsGroup.php');
+
+define('OUTPUT_FIELD_BRAND_ID', 'b__id');
+define('OUTPUT_FIELD_GROUP_BRAND_ID', 'gob__id');
+define('STATUS', 'status');
+define('OUTPUT_b__name', 'b__name');
+define('OUTPUT_b__parent_id', 'b__parent_id');
+define('STATUS_b', 'b__status');
+
+

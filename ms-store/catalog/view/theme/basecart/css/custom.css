@@ -1,0 +1,168 @@
+
+html{
+    height: 100%;
+    position:relative;
+}
+
+body {
+    /* Отступ снизу, по высоте футера */
+    
+} 
+
+.messages-ajax{
+    z-index: 500;
+    position: fixed;
+    top: 0;
+    //background: rgba(0, 0, 0, 0.2);  
+}
+
+span.glyphicon.ds-loading {
+    animation: ani 2s infinite linear;
+    font-size:40px;
+    position: fixed;
+    z-index: 11111;
+}
+
+/* смещение меню */
+.collapse>.navbar-right {
+    margin-top: -15px;
+}
+
+
+/* фиксация футера*/
+footer {
+    bottom: 0;
+    width: 100%;
+}
+
+#content {
+    min-height: 600px;
+}
+
+/* Убираем отступ слайд шоу */
+#slideshow0{
+    margin-left:  -15px; 
+}
+
+/* отступ скрытых кнопок от search input*/
+.input-group, .btn-group>.btn, .btn-group-vertical>.btn {
+    margin-bottom: 5px;
+}
+
+
+/* increase icon in header 
+изменение цвета icon в header */
+.hover1:hover, .hover2:hover, .hover3:hover, .hover4:hover, .hover5:hover {
+   color: #AAF5F8;
+}
+
+
+/* color change Search button in the header
+изменение цвета кнопки поиска в header (Красная кнопка для темы defaul)
+.btn-success {
+    background-color: #F80000;
+    border-color: #F80000;
+
+}
+.btn-success:hover, .btn-success:focus{
+    background-color: #CC0605;
+    border-color: #CC0605;
+}*/
+
+/* подъем кнопки обновления на страницы корзины */
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {    
+    margin-bottom: 4px;
+}
+
+/* color change Search button in the header
+изменение цвета кнопки поиска в header (серебряная кнопка)*/
+.btn-success, .btn-default {
+    background-color: #aea79f;
+    border-color: #978e83;
+
+}
+.btn-success:hover, .btn-success:focus{
+    background-color: #978e83;
+    border-color: #92897e;
+}
+
+/* Убираем маркеры */
+li.list {
+    list-style-type: none; 
+}
+ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+#search-botton {
+    margin-bottom: 5px;
+}
+
+/* уменьшение размера header после скроллинга*/
+#search-top{
+    margin-top: 7px;
+    
+}
+.logoheader {
+    position: relative;
+    width: 110%;
+    right: -10px;
+    bottom: 3px;
+}
+
+/* отображение текста логотипа AvtoBear*/
+.avtobear {
+    font-family: "Impact Italic", Impact, serif, cursive;
+    font-size: 40px;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: -5px;
+    margin-top: 8px;
+}
+.small-avtobear {
+    font-family: "Impact Italic", Impact, serif, sans-serif;
+    font-size: 15px;
+    color: #b9ad9d;
+    text-align: center;
+}
+
+
+@keyframes ani {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.navbar-fixed-top {
+    display: none;
+}
+
+.x-icon {
+    font-size: 15px;
+}
+/* для значка колличевства сообщений */
+.label.alert_messages {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    right: 1px;
+    width: 19px;
+    height: 19px;
+    line-height: 14px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.09);
+}
+
+

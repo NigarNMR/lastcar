@@ -1,0 +1,38 @@
+DROP PROCEDURE `singleBrandUpdate2`;
+
+DELIMITER $$
+CREATE PROCEDURE `singleBrandUpdate2`(IN `inputBrandName` VARCHAR(100))
+BEGIN
+
+  DECLARE oldBrandName VARCHAR(100);
+  DECLARE oldBKEY VARCHAR(100);
+  DECLARE newBrandName VARCHAR(100);
+  DECLARE newBKEY VARCHAR(100);
+  DECLARE checkHld TINYINT(1);
+  
+  SELECT SortBrands.BKEY, SortBrands.BRAND INTO oldBKEY, oldBrandName FROM
+    (SELECT BRAND, BKEY	FROM TDM_PRICES	GROUP BY BINARY BRAND) as SortBrands
+  WHERE BINARY SortBrands.BRAND = inputBrandName;
+  SELECT aliasCheck(oldBrandName) INTO checkHld;
+  IF checkHld
+  THEN
+	BEGIN
+	
+	SELECT getParentFunc(oldBrandName) INTO newBrandName;
+	SELECT clearBrandFunc(newBrandName) INTO newBKEY;
+	UPDATE TDM_PRICES
+	SET BRAND=newBrandName, BKEY=newBKEY
+	WHERE BRAND=oldBrandName;
+	UPDATE TDM_LINKS
+	SET BKEY1=newBKEY,PKEY1=CONCAT(newBKEY,AKEY1)
+	WHERE BKEY1=oldBKEY;
+	UPDATE TDM_LINKS
+	SET BKEY2=newBKEY,PKEY2=CONCAT(newBKEY,AKEY2)
+	WHERE BKEY2=oldBKEY;
+	END;
+  ELSE
+	CALL insertBrand(oldBrandName);
+  END IF;
+
+END $$
+DELIMITER ;

@@ -1,0 +1,1 @@
+<?php     //TDMod content    global $TDMContent;    echo $TDMContent;?>

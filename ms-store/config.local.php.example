@@ -1,0 +1,51 @@
+<?php
+
+$domain = '192.168.33.10';
+
+// HTTP
+define('HTTP_SERVER', 'http://' . $domain . '/');
+
+// HTTPS
+define('HTTPS_SERVER', 'http://' . $domain . '/');
+
+// DIR
+define('DIR_APPLICATION', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'catalog' . DIRECTORY_SEPARATOR);
+define('DIR_SYSTEM', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'system' . DIRECTORY_SEPARATOR);
+define('DIR_IMAGE', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'image' . DIRECTORY_SEPARATOR);
+
+//define('DIR_LANGUAGE', 'C:/OpenServer/domains/eijen.localhost/catalog/language/');
+define('DIR_LANGUAGE', DIR_APPLICATION . 'language'  . DIRECTORY_SEPARATOR);
+define('DIR_TEMPLATE', DIR_APPLICATION . 'view'. DIRECTORY_SEPARATOR . 'theme' . DIRECTORY_SEPARATOR);
+
+define('DIR_CONFIG', DIR_SYSTEM . 'config' . DIRECTORY_SEPARATOR);
+define('DIR_CACHE', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR . 'cache' . DIRECTORY_SEPARATOR);
+define('DIR_DOWNLOAD', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR . 'download' . DIRECTORY_SEPARATOR);
+define('DIR_LOGS', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR . 'logs' . DIRECTORY_SEPARATOR);
+define('DIR_MODIFICATION', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR . 'modification' . DIRECTORY_SEPARATOR);
+define('DIR_UPLOAD', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR . 'upload' . DIRECTORY_SEPARATOR);
+define('DIR_TEMPORARY', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR . 'tmp' . DIRECTORY_SEPARATOR);
+
+// DB
+define('DB_DRIVER', 'mysqli');
+define('DB_HOSTNAME', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_DATABASE', 'web_eijen_ru');
+define('DB_PORT', '3306');
+define('DB_PREFIX', 'oc_');
+
+
+define('TD_DB_DRIVER', 'mysqli');
+define('TD_DB_HOSTNAME',  'localhost');
+define('TD_DB_USERNAME', 'root');
+define('TD_DB_PASSWORD', '');
+define('TD_DB_DATABASE', 'web_eijen_ru');
+define('TD_DB_PORT', '3306');
+define('TD_DB_PREFIX', 'oc_');
+define('TD_MEDIA_PATH', '/');
+
+
+
+
+// Local PHP interpreter
+define('PHP_INTERPRETER', 'php');

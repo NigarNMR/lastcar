@@ -1,0 +1,68 @@
+<?php
+
+$domain = 'eijen.localhost';
+
+// HTTP
+define('HTTP_SERVER', 'http://' . $domain . '/admin/');
+define('HTTP_CATALOG', 'http://' . $domain . '/');
+
+// HTTPS
+define('HTTPS_SERVER', 'http://' . $domain . '/admin/');
+define('HTTPS_CATALOG', 'http://' . $domain . '/');
+
+// DIR
+//define('DIR_APPLICATION', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'catalog' . DIRECTORY_SEPARATOR);
+define('DIR_APPLICATION', dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'admin' . DIRECTORY_SEPARATOR);
+define('DIR_SYSTEM', dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'system/');
+define('DIR_IMAGE', dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'image/');
+
+define('DIR_LANGUAGE', DIR_APPLICATION .'language' . DIRECTORY_SEPARATOR);
+define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template'  . DIRECTORY_SEPARATOR);
+
+define('DIR_CONFIG', DIR_SYSTEM . 'config'  . DIRECTORY_SEPARATOR);
+define('DIR_CACHE', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR .'cache'  . DIRECTORY_SEPARATOR);
+define('DIR_DOWNLOAD', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR . 'download'  . DIRECTORY_SEPARATOR);
+define('DIR_LOGS', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR . 'logs' . DIRECTORY_SEPARATOR);
+define('DIR_MODIFICATION', DIR_SYSTEM . 'storage'. DIRECTORY_SEPARATOR . 'modification' . DIRECTORY_SEPARATOR);
+define('DIR_UPLOAD', DIR_SYSTEM . 'storage' . DIRECTORY_SEPARATOR . 'upload' . DIRECTORY_SEPARATOR);
+
+define('DIR_CATALOG', dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'catalog/');
+define('GET_CROSSES', "http://139.168.33.11/getCrosses.php");
+define('GET_COUNT_CROSSES',"http://139.168.33.11/GetCountCrosses.php");
+define('ADD_CROSSES', "http://139.168.33.11/addCross.php");
+define('DELETE_CROSSES', "http://139.168.33.11/deleteCross.php");
+define('EDIT_CROSSES', "http://139.168.33.11/edit_cross.php");
+define('GET_SIMILARITY', "http://139.168.33.11/brand/GetSimilarity.php");
+define('GET_SIMILARITY_GROUP', "http://139.168.33.11/brand/GetSimilarityGroup.php");
+define('GET_BRAND', "http://139.168.33.11/brand/getBrand.php");
+define('GET_DICT_CONTENT', "http://139.168.33.11/brand/getDictContent.php");
+define('GET_GROUP_BY_BRAND', "http://139.168.33.11/brand/getGroupByBrand.php");
+define('GET_BRANDS_GROUP', "http://139.168.33.11/brand/getBrandsGroup.php");
+define('GET_BRANDS_IN_GROUP', "http://139.168.33.11/brand/getBrandsInGroup.php");
+define('POST_MAIN_STATUS', "http://139.168.33.11/brand/PostMainStatus.php");
+define('GET_BRAND_GROUP_ID_BY_NAME', "http://139.168.33.11/brand/GetGroupIdbyName.php");
+define('GET_BRAND_NAME_BY_ID', "http://139.168.33.11/brand/GetBrandNamebyId.php");
+define('GET_BRAND_ID_BY_NAME', "http://139.168.33.11/brand/GetBrandIdbyName.php");
+define('GET_COUNT_BRANDS_GROUP',"http://139.168.33.11/brand/GetCountBrands.php");
+define('GET_ALL_BRANDS',"http://139.168.33.11/brand/GetAllBrands.php");
+define('GET_ALL_BRANDS_GROUP',"http://139.168.33.11/brand/GetAllBrandsGroup.php");
+define('GET_NO_CHECKED_BRANDS',"http://139.168.33.11/brand/GetNoCheckedBrands.php");
+define('ADD_BRANDS_GROUP', "http://139.168.33.11/brand/addBrandsGroup.php");
+define('ADD_NO_CHECKED_BRAND', "http://139.168.33.11/brand/addNoCheckedBrand.php");
+
+define('DELETE_BRANDS_IN_GROUP', "http://139.168.33.11/brand/deleteBrandsInGroup.php");
+define('DELETE_BRANDS_GROUP', "http://139.168.33.11/brand/deleteBrandsGroup.php");
+define('DELETE_BRANDS', "http://139.168.33.11/brand/deleteBrands.php");
+define('EDIT_BRANDS_GROUP', "http://139.168.33.11/brand/editBrandsGroup.php");
+define('EDIT_BRANDS', "http://139.168.33.11/brand/editBrands.php");
+define('ADD_BRAND_IN_GROUP', "http://139.168.33.11/brand/addBrandInGroup.php");
+// DB
+define('DB_DRIVER', 'mysqli');
+define('DB_HOSTNAME', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_DATABASE', 'web_eijen_ru');
+define('DB_PORT', '3306');
+define('DB_PREFIX', 'oc_');
+
+define('TD_MEDIA_PATH', '/');

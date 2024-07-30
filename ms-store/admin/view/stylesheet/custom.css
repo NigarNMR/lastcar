@@ -1,0 +1,11 @@
+.pick-a-color-markup, .input-status {
+    margin:10px 0px;
+}
+
+.control-label-color {
+    padding-bottom: 15px;
+}
+
+.any-color {
+background-color: #e1e0e0;
+}
